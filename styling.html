@@ -13,14 +13,20 @@ Description : Learning CSS.
     <title>CSS Advanced Demonstrations</title>
     <style>
         #margin-demo {
+            margin: 30px;
+            border: 2px solid black;
+            display: inline;
             /*Modify #margin-demo to have a margin of 30px and a solid black border of 2px. Also, the borders must fit the content.*/
         }
 
         .padding-demo {
+            padding: 30px;
+            border: 2px dashed red;
             /*Adjust .padding-demo to include 30px padding and a dashed red border of 2px.*/
         }
 
         .container .nested-opacity {
+            opacity: 0.2;
             /*Change the opacity of .nested-opacity to 0.2!*/
         }
 
@@ -28,9 +34,11 @@ Description : Learning CSS.
         .inline-demo {
             /*Change the display to see all elements of this type in a line.*/
             margin: 15px;
+            display: inline-block;
         }
 
         .block-demo {
+            text-align: center;
             /*Ensure .block-demo centers its text.*/
         }
 
@@ -44,22 +52,31 @@ Description : Learning CSS.
             /*
             Add CSS that I stick the first child to the left side of the screen.
             */
+            float: left;
             color: red;
             
         }
 
-        .block-demo > .inline-demo:nth-child(2) {            
+        .block-demo > .inline-demo:nth-child(2) {      
+            float: center;      
             color: blue;
         }
 
         /* Add your css for the thrid child here. */
+        .block-demo > .inline-demo:nth-child(3) {
+            float: right;
+            color: green;
+        }
 
         .image-demo {
             /* Modify the .image-demo class to adjust the image's width to 50% of the screen. */
             border: 2px solid blue;
+            width: 50%;
         }
 
         .hover-demo:hover {
+            color: blue;
+            cursor: grabbing;
             /*Create a hover effect for .hover-demo that changes its color to blue and cursor to grabbing.*/
         }
     </style>
@@ -86,7 +103,7 @@ Description : Learning CSS.
 
     <h2>CSS Image Styling with Inline CSS</h2>
     <!-- Add a dotted green border of 3px inline. Which style will win the competition? -->
-    <img class="image-demo" style="" src="images/example.svg" alt="Demo Image">
+    <img class="image-demo" style="border: 3px dotted green" src="images/example.svg" alt="Demo Image">
 
     <h2>CSS Hover Effects</h2>
     <div class="hover-demo"><span>Hover over me! My color will change to blue!</span></div>
